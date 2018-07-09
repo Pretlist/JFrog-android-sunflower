@@ -8,7 +8,7 @@ about: This Template Should Be Used for Every Pull Request.
 
 
 
-# Mention Reference to a Related Issue (If Any) in Your Repository
+# Mention Reference to a Related Issue(If Any) in Your Repository
 
 
 
