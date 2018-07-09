@@ -5,25 +5,30 @@ about: Create a report to help us improve. Search for similar issues posted befo
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+# The Software and Hardware Environment When the Issue Occur
+⋅⋅* Os with Version: [E.G. Android, Linux…]
+⋅⋅* Device: [E.G. PixelXL, Pixel, Nokia…]
+⋅⋅* App Version [E.G. 1.1, 2.4…]
 
-**To Reproduce**
-Steps to reproduce the behaviour:
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+# Describe the Issue (<50 Chars)
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
 
-**Logs**
-Sharing logs would always be a great help.
 
-**Environment**
- - OS with version: [e.g. iOS, Android]
- - Device: [e.g. iPhone6, PixelXL]
- - App version [e.g. 22]
+# List the Steps to Reproduce the Issue
+⋅⋅* Launch the App.
+⋅⋅* Goto Message Screen.
+⋅⋅* Long Press on Broadcast Button.
+⋅⋅* Broadcast Ripple Doesn't Appear on Screen.
 
-**Additional Information**
-Add any other context about the problem here.
+
+
+# Describe the Expected Behaviour of the Issue
+
+
+
+# Attach Logs and Screenshot (If Applicable)
+
+
+
+# Mention Any Additional Information about the Issue.
