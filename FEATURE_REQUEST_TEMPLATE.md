@@ -22,6 +22,7 @@ about: Mention title for the new feature request.
 ### Describe Is Your Feature Request Related to a Problem?
 
 - No confirmation dialogue when user is removed from group.
+---
 
 
 
@@ -33,3 +34,5 @@ about: Mention title for the new feature request.
 ### Additional Information
 
 - Attach screenshot and logs.
+
+
