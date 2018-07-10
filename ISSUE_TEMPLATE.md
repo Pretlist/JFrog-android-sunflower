@@ -7,8 +7,8 @@ about: Create a report to help us improve. Search for similar issues posted befo
 
 ### The Software and Hardware Environment When the Issue Occur
 
-1. OS with Version: [E.G. Android, Linux…]
-2. Device: [E.G. PixelXL, Pixel, Nokia…]
+1. OS with Version: [e.g. Android, Linux…]
+2. Device: [e.g. PixelXL, Pixel, Nokia, Gionee, Oppo]
 3. App Version [E.G. 1.1, 2.4…]
 ---
 
@@ -39,7 +39,5 @@ about: Create a report to help us improve. Search for similar issues posted befo
 
 
 ### Mention Any Additional Information about the Issue.
-
-
 
 
