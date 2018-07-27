@@ -5,7 +5,7 @@ about: Mention title for the new feature request.
 ---
 
 # Module Name in Which You Want to Add the Feature
-⋅⋅* Chat 
+⋅⋅* Chat
 ⋅⋅* Registration […]
 
 
