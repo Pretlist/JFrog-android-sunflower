@@ -17,7 +17,7 @@ A clear and concise description of what the problem is. Ex. I'm always frustrate
 A clear and concise description of what you want to happen and any alternative solutions or features you've considered.
 
 **Issue ID (Optional)**
-Mention the issue ID if filed any issue related to the feature. 
+Mention the issue ID if filed any issue related to the feature.
 
 **Additional Information**
 Add any other context, screenshot or logs about the feature request here.

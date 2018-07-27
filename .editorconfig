@@ -1,0 +1,131 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+
+# Plugins required for sublime, plugins not required for Android Studio, IntelliJ (certain products)
+# URL : https://editorconfig.org/#file-location
+
+
+
+
+*** REFERENCE LINK ***
+# babel - URL : https://github.com/babel/babel# bootstrap
+# web-starter-kit - URL :  https://github.com/google/web-starter-kit
+# gulp - URL : https://github.com/gulpjs/gulp
+# homebrew-cask - URL :  https://github.com/Homebrew
+# yeoman - URL : https://github.com/yeoman/yo
+
+
+
+# Unix-style newlines with a newline ending in every file
+[*]
+charset = utf-8
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+
+[*.{js,json}]
+indent_style = space
+indent_size = 2
+
+[*.{md,markdown}]
+trim_trailing_whitespace = false
+
+
+
+
+*** REFERENCE LINK ***
+# ember.js - URL : https://github.com/emberjs/ember.js
+
+[*.hbs]
+insert_final_newline = false
+
+
+
+
+
+*** REFERENCE LINK ***
+# grunt-shell -  URL : https://github.com/sindresorhus/grunt-shell#readme
+# html5-boilerplate -  URL : https://github.com/h5bp/html5-boilerplate
+# jquery -  URL : https://github.com/jquery/jquery
+
+* The indent size used in the `package.json` file cannot be changed
+* https://github.com/npm/npm/pull/3180#issuecomment-16336516
+
+[{package.json,*.yml}]
+indent_style = space
+indent_size = 2
+
+
+
+
+*** REFERENCE LINK ***
+# ignite -  URL : https://github.com/infinitered/ignite
+
+insert_final_newline = true
+
+
+
+
+*** REFERENCE LINK ***
+# bootstrap-material-design - URL : https://github.com/FezVrasta/bootstrap-material-design
+# kong - URL : https://github.com/Kong/kong
+
+[*.template]
+indent_style             = space
+indent_size              = 4
+
+# Source code files
+[*.{c,css,cxx,cpp,h,html,hxx,hpp,java,js,,m,mm,py,styl,swift,xsl}]
+indent_style = space
+indent_size = 4
+
+
+
+
+*** REFERENCE LINK ***
+# LibreOffice/core - URL : https://github.com/LibreOffice/core
+
+# Patch files
+[*.patch.*]
+trim_trailing_whitespace = false
+
+
+
+
+*** REFERENCE LINK ***
+# react-native - URL : https://github.com/facebook/react-native
+
+[*.gradle]
+indent_size = 4
+
+
+
+
+*** REFERENCE LINK ***
+# node.js - URL : https://github.com/nodejs/node
+
+[configure]
+indent_style = space
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+indent_size = 8
+
+
+
+
+
+*** REFERENCE LINK ***
+# Wordpress - URL : https://github.com/WordPress/WordPress
+# vscode  - URL : https://github.com/Microsoft/vscode/
+# zsh-users/zsh-autosuggestions - URL : https://github.com/zsh-users/zsh-autosuggestions
+
+[*.rb]
+indent_style = space
+indent_size = 2
+
+
