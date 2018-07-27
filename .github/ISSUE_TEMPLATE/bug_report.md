@@ -16,9 +16,9 @@ creating a new issue.
 
 
 **Environment**
- - OS with version: [e.g. iOS, Android]
- - Device: [e.g. iPhone6, PixelXL]
- - App version [e.g. 22]
+- OS with version: [e.g. iOS, Android]
+- Device: [e.g. iPhone6, PixelXL]
+- App version [e.g. 22]
 
 
 
