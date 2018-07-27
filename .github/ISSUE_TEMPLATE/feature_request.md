@@ -12,6 +12,11 @@ about: Mention title for the new feature request.
 
 # Description of How This Feature Is Useful for Our Product
 
+<<<<<<< HEAD
+**Issue ID (Optional)**
+Mention the issue ID if filed any issue related to the feature.
+=======
+>>>>>>> master
 
 
 # Describe Is Your Feature Request Related to a Problem?

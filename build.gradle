@@ -13,6 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+        apply plugin: "com.gradle.build-scan"
+        // apply plugin: 'se.patrikerdes.use-latest-versions'  // https://github.com/patrikerdes/gradle-use-latest-versions-plugin
+        // apply plugin: 'com.github.ben-manes.versions'
+        // apply plugin: 'jacoco'
+        // apply plugin: 'java'
+        defaultTasks 'dependencyUpdates'
+
+
 
 buildscript {
     // Define versions in a single place
@@ -23,11 +31,13 @@ buildscript {
         targetSdkVersion = 28
 
         // App dependencies
+        gradleVersion = '4.9-rc-1'
+
         constraintLayoutVersion = '1.1.1'
         dataBindingVersion = '3.0.1'
         espressoVersion = '3.0.1'
         glideVersion = '4.4.0'
-        gradleVersion = '3.2.0-beta01'
+        //gradleVersion = '3.2.0-alpha18'
         gsonVersion = '2.8.2'
         junitVersion = '4.12'
         lifecycleVersion = '1.1.1'
@@ -43,21 +53,252 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven {
+              url "https://plugins.gradle.org/m2/"
+        }
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:$gradleVersion"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.android.tools.build:gradle:latest.release"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:latest.release"
+
+
+        classpath "com.netflix.nebula:nebula-release-plugin:latest.release"                // nebula.release plugin
+        classpath "com.netflix.nebula:gradle-info-plugin:latest.release"                  //  nebula.info plugin
+        classpath "com.netflix.nebula:gradle-java-cross-compile-plugin:latest.release"    //  nebula.java-cross-compile plugin  
+
+
+        classpath "com.netflix.nebula:nebula-publishing-plugin:latest.release"            //  maven/ivy/source-jar publish plugin
+ 
+       
+        classpath "com.netflix.nebula:gradle-override-plugin:latest.release"              //  nebula.override plugin
+        classpath "com.netflix.nebula:gradle-resolution-rules-plugin:latest.release"      //  nebula.resolution-rules
+
+
+        classpath "com.netflix.nebula:nebula-project-plugin:latest.release"               //  nebula.project plugin
+            //classpath "com.netflix.nebula:nebula-kotlin-plugin:latest.release"              //  nebula.kotlin plugin
+            //classpath "com.gradle:build-scan-plugin:latest.release"                         //  com.gradle.build-scan plugin
+            //classpath "com.gradle.publish:plugin-publish-plugin:latest.release"             //  com.gradle.plugin-publish plugin
+            //classpath "com.netflix.nebula:nebula-dependency-recommender:latest.release"     //  nebula.dependency-recommender plugin  *DEPRECATED*  See Gradle.Properties org.gradle.advancedpomsupport=true
+
+        // classpath "gradle.plugin.se.patrikerdes:gradle-use-latest-versions-plugin:0.2.3"  //  Gradle Use Latest Versions Plugin
+        classpath "com.github.ben-manes:gradle-versions-plugin:latest.release"            //  plugin to handle dependency updates
+
+        classpath "com.netflix.nebula:nebula-project-plugin:latest.release"
+            // classpath "com.github.dcendents:android-maven-gradle-plugin:latest.release"    //  Gradle Android Maven plugin    
+
+        classpath "com.diffplug.spotless:spotless-plugin-gradle:latest.release"           // Spotless plugin   
+
+        classpath "com.netflix.nebula:gradle-lint-plugin:latest.release"                 //  Netflix Linter
+
+        classpath "com.gradle:build-scan-plugin:latest.release"                           //  Build Scan plugin
+
     }
 }
 
+
 allprojects {
+
+    //apply plugin: 'java-library'
+    // *** NOT REQUIRED FOR ANDROID PROJECTS *** java-library : The Java Library plugin expands the capabilities of the Java plugin by providing specific knowledge about Java libraries. Url for this plugin : https://docs.gradle.org/current/userguide/java_library_plugin.html ; https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+   
+    apply plugin: 'project-report'
+    //project-report : Url for this plugin - https://docs.gradle.org/current/userguide/project_report_plugin.html ; https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+   
+    apply plugin: "nebula.release"
+    //nebula.release : May need to be configured. Url for this plugin - https://github.com/nebula-plugins/nebula-release-plugin ; https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+    apply plugin: "nebula.info"
+    //nebula.info : Url for this plugin - https://plugins.gradle.org/plugin/nebula.info ; https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+    apply plugin: "nebula.java-cross-compile"
+    //nebula.java-cross-compile : Url for this plugin - https://plugins.gradle.org/plugin/nebula.java-cross-compile
+
+
+    //one of maven-publish or ivy-publish, but can use both without issue
+    apply plugin: "nebula.maven-publish"
+    //nebula.maven-publish : Url for this plugin - https://plugins.gradle.org/plugin/nebula.maven-publish ; https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+    apply plugin: "nebula.ivy-publish"
+    //nebula.ivy-publish : Url for this plugin - https://plugins.gradle.org/plugin/nebula.ivy-publish ;  https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+    apply plugin: "nebula.source-jar"
+    //nebula.source-jar : Url for this plugin - https://plugins.gradle.org/plugin/nebula.source-jar ;  https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+
+
+    apply plugin: "nebula.override"
+    //nebula.override : Url for this plugin - https://plugins.gradle.org/plugin/nebula.override ;  https://github.com/nebula-plugins/example-project/blob/master/build.gradle
+    apply plugin: "nebula.resolution-rules"
+    
+
+    apply plugin: "nebula.project"
+    // nebula.project : Url for this plugin - https://plugins.gradle.org/plugin/nebula.project
+    
+        // apply plugin: "nebula.kotlin"
+        // *** Throws errors related to compile, testCompile ***
+        // nebula.kotlin : Url for this plugin - https://plugins.gradle.org/plugin/nebula.kotlin
+        
+        // apply plugin: "com.gradle.build-scan"
+        // com.gradle.build-scan : Url for this plugin - https://plugins.gradle.org/plugin/com.gradle.build-scan
+
+        // apply plugin: "com.gradle.plugin-publish"
+        // com.gradle.plugin-publish : Url for this plugin - https://plugins.gradle.org/plugin/com.gradle.plugin-publish
+
+        // apply plugin: "nebula.dependency-recommender" #DEPRECATED See Gradle.Properties org.gradle.advancedpomsupport=true
+    
+        // apply plugin: 'se.patrikerdes.use-latest-versions'
+        // *** TO RETRIEVE REPORT *** gradle useLatestVersions && gradle useLatestVersionsCheck  
+        // https://github.com/patrikerdes/gradle-use-latest-versions-plugin
+        apply plugin: "com.github.ben-manes.versions"
+        // *** TO RETRIEVE REPORT *** gradle dependencyUpdates -Drevision=release -DoutputFormatter=json -DreportfileName=myCustomReport
+        //ben-manes.versions : Plugin to handle dependency updates. Url for this plugin - https://plugins.gradle.org/plugin/com.github.ben-manes.versions
+
+  
+        // apply plugin: 'com.android.library'
+        // apply plugin: 'com.github.dcendents.android-maven'
+        //*** NOT REQUIRED *** android-maven : Url for this plugin - https://github.com/dcendents/android-maven-gradle-plugin
+    
+    apply plugin: "nebula.project"
+    //nebula.project : Url for this plugin - https://plugins.gradle.org/plugin/nebula.project 
+
+    apply plugin: "nebula.lint"
+    //nebula.lint : Url for this plugin - https://plugins.gradle.org/plugin/nebula.lint
+
+      
+    apply plugin: "com.diffplug.gradle.spotless"
+    // gradle.spotless : Url for this plugin - https://plugins.gradle.org/plugin/com.diffplug.gradle.spotless ; https://github.com/diffplug/spotless ; https://github.com/uber/crumb/blob/master/build.gradle
+    // spotless project examples : https://github.com/diffplug/spotless ; https://github.com/uber/crumb
+      spotless {
+        format 'misc', {
+          target '**/*.md', '**/.gitignore'
+
+          trimTrailingWhitespace()
+          indentWithTabs() // or spaces. Takes an integer argument if you don't like 4
+          endWithNewline()
+            }
+
+        java {
+          licenseHeaderFile rootProject.file('spotless/copyright.java')       // License header file
+
+          removeUnusedImports() // removes any unused imports
+            }
+
+        groovyGradle {
+          target '**/*.gradle'
+            }
+
+        format 'cpp', {
+           target '**/*.hpp', '**/*.cpp'
+
+          replace      'Not enough space after if', 'if(', 'if ('
+          replaceRegex 'Too much space after if', 'if +\\(', 'if ('
+            }
+
+        kotlinGradle {
+          // same as kotlin, but for .gradle.kts files (defaults to '*.gradle.kts')
+          target '*.gradle.kts', 'additionalScripts/*.gradle.kts'
+          }
+
+        freshmark {
+          target 'README.md', 'CONTRIBUTING.md'   // defaults to '**/*.md'
+          propertiesFile('gradle.properties')     // loads all the properties in the given file
+           properties {
+              it.put('key', 'value')              // specify other properties manually
+              }
+          }
+      }
+      
+
+    // Add minimum-dependency-version rule from Gradle lint
+    // Check order Right -> Left or Left -> Right for Gradle Lint rules.
+    // gradleLint.rules = [
+    //                     'all-nebula-renames',
+    //                     'archaic-wrapper',
+    //                     'duplicate-dependency-class',
+    //                     'unused-dependency',
+    //                     'unused-exclude-by-dep',
+    //                     'unused-exclude-by-conf'
+    //                     ]
+
+    gradleLint.rules = [
+                          // 'all-dependency',
+                          'all-nebula-renames',
+                          'archaic-wrapper',
+                          'dependency-parentheses',
+                          'dependency-tuple',
+                          'duplicate-dependency-class',
+                          'minimum-dependency-version',
+                          'overridden-dependency-version',
+                          'recommended-versions',
+                          'rename-nebula-clojure',
+                          'rename-nebula-deb',
+                          'rename-nebula-dependency-lock',
+                          'rename-nebula-facet',
+                          'rename-nebula-git-scm',
+                          'rename-nebula-info-ci',
+                          'rename-nebula-info',
+                          'rename-nebula-integtest',
+                          'rename-nebula-javadoc-jar',
+                          'rename-nebula-ospackage-application-daemon',
+                          'rename-nebula-ospackage-application',
+                          'rename-nebula-ospackage',
+                          'rename-nebula-override',
+                          'rename-nebula-release',
+                          'rename-nebula-source-jar',
+                          'rename-nebula-stash',
+                          // 'transitive-duplicate-dependency-class',
+                          'undeclared-dependency',
+                          'unused-dependency',
+                          'unused-exclude-by-conf',
+                          'unused-exclude-by-dep',
+                        ]
+
+
+
+    nebulaResolutionRules {
+    optional = ['slf4j-bridge']
+    }
+    
     repositories {
         google()
         jcenter()
-    }
-}
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+        // setup your repositories   
+        maven {
+        url 'repository/maven'
+        }
+    }
+
+    configurations {
+          bom
+          upToDate
+          exceedLatest
+          upgradesFound
+          upgradesFound2
+          unresolvable
+          unresolvable2
+    }
+
+dependencyUpdates {
+  checkForGradleUpdate = true
+  resolutionStrategy {
+    componentSelection { rules ->
+      rules.all { ComponentSelection selection ->
+        boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm'].any { qualifier ->
+          selection.candidate.version ==~ /(?i).*[.-]${qualifier}[.\d-]*/
+        }
+        if (rejected) {
+          selection.reject('Release candidate')
+            }
+          }
+        }
+      }
+    }
+  }
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '4.9-rc-1'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+    }
+
+apply from: 'gradle/checkstyle.gradle'
+
+
+

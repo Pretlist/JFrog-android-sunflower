@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve. Search for similar issues posted before
-  creating a new issue.
+creating a new issue.
 
 ---
 
@@ -15,11 +15,10 @@ about: Create a report to help us improve. Search for similar issues posted befo
 
 
 
-# List the Steps to Reproduce the Issue
-⋅⋅* Launch the App.
-⋅⋅* Goto Message Screen.
-⋅⋅* Long Press on Broadcast Button.
-⋅⋅* Broadcast Ripple Doesn't Appear on Screen.
+**Environment**
+ - OS with version: [e.g. iOS, Android]
+ - Device: [e.g. iPhone6, PixelXL]
+ - App version [e.g. 22]
 
 
 
