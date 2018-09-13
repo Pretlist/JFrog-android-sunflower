@@ -72,7 +72,7 @@ buildscript {
         classpath "com.netflix.nebula:nebula-publishing-plugin:latest.release"            //  maven/ivy/source-jar publish plugin
  
        
-        classpath "com.netflix.nebula:gradle-override-plugin:latest.release"              //  nebula.override plugin
+        classpath "com.netflix.nebula:gradle-override-plugin:3.0.2"              //  nebula.override plugin
         classpath "com.netflix.nebula:gradle-resolution-rules-plugin:latest.release"      //  nebula.resolution-rules
 
 
