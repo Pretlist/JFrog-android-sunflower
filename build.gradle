@@ -77,7 +77,7 @@ buildscript {
 
 
         classpath "com.netflix.nebula:nebula-project-plugin:latest.release"               //  nebula.project plugin
-            //classpath "com.netflix.nebula:nebula-kotlin-plugin:latest.release"              //  nebula.kotlin plugin
+            //classpath "com.netflix.nebula:nebula-kotlin-plugin:2.0.0"              //  nebula.kotlin plugin
             //classpath "com.gradle:build-scan-plugin:latest.release"                         //  com.gradle.build-scan plugin
             //classpath "com.gradle.publish:plugin-publish-plugin:latest.release"             //  com.gradle.plugin-publish plugin
             //classpath "com.netflix.nebula:nebula-dependency-recommender:latest.release"     //  nebula.dependency-recommender plugin  *DEPRECATED*  See Gradle.Properties org.gradle.advancedpomsupport=true
