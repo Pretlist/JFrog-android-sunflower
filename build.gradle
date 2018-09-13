@@ -83,7 +83,7 @@ buildscript {
             //classpath "com.netflix.nebula:nebula-dependency-recommender:latest.release"     //  nebula.dependency-recommender plugin  *DEPRECATED*  See Gradle.Properties org.gradle.advancedpomsupport=true
 
         // classpath "gradle.plugin.se.patrikerdes:gradle-use-latest-versions-plugin:0.2.3"  //  Gradle Use Latest Versions Plugin
-        classpath "com.github.ben-manes:gradle-versions-plugin:latest.release"            //  plugin to handle dependency updates
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.20.0"            //  plugin to handle dependency updates
 
         classpath "com.netflix.nebula:nebula-project-plugin:latest.release"
             // classpath "com.github.dcendents:android-maven-gradle-plugin:latest.release"    //  Gradle Android Maven plugin    
