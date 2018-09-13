@@ -86,7 +86,7 @@ buildscript {
         classpath "com.github.ben-manes:gradle-versions-plugin:latest.release"            //  plugin to handle dependency updates
 
         classpath "com.netflix.nebula:nebula-project-plugin:latest.release"
-            // classpath "com.github.dcendents:android-maven-gradle-plugin:latest.release"    //  Gradle Android Maven plugin    
+            // classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"    //  Gradle Android Maven plugin    
 
         classpath "com.diffplug.spotless:spotless-plugin-gradle:latest.release"           // Spotless plugin   
 
