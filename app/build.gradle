@@ -140,7 +140,7 @@ dependencies {
     // androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
     // testImplementation "junit:junit:$rootProject.junitVersion"
 
-    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:latest.release"
+    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:3.0.2"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:latest.release"
     testImplementation "junit:junit:latest.release"
 }
