@@ -88,7 +88,7 @@ buildscript {
         classpath "com.netflix.nebula:nebula-project-plugin:latest.release"
             // classpath "com.github.dcendents:android-maven-gradle-plugin:latest.release"    //  Gradle Android Maven plugin    
 
-        classpath "com.diffplug.spotless:spotless-plugin-gradle:latest.release"           // Spotless plugin   
+        classpath "com.diffplug.spotless:spotless-plugin-gradle:3.15.0"           // Spotless plugin   
 
         classpath "com.netflix.nebula:gradle-lint-plugin:latest.release"                 //  Netflix Linter
 
