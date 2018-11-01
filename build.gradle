@@ -69,7 +69,7 @@ buildscript {
         classpath "com.netflix.nebula:gradle-java-cross-compile-plugin:latest.release"    //  nebula.java-cross-compile plugin  
 
 
-        classpath "com.netflix.nebula:nebula-publishing-plugin:latest.release"            //  maven/ivy/source-jar publish plugin
+        classpath "com.netflix.nebula:nebula-publishing-plugin:9.2.0"            //  maven/ivy/source-jar publish plugin
  
        
         classpath "com.netflix.nebula:gradle-override-plugin:latest.release"              //  nebula.override plugin
