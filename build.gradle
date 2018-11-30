@@ -90,7 +90,7 @@ buildscript {
 
         classpath "com.diffplug.spotless:spotless-plugin-gradle:latest.release"           // Spotless plugin   
 
-        classpath "com.netflix.nebula:gradle-lint-plugin:latest.release"                 //  Netflix Linter
+        classpath "com.netflix.nebula:gradle-lint-plugin:10.3.2"                 //  Netflix Linter
 
         classpath "com.gradle:build-scan-plugin:latest.release"                           //  Build Scan plugin
 
