@@ -64,7 +64,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:latest.release"
 
 
-        classpath "com.netflix.nebula:nebula-release-plugin:latest.release"                // nebula.release plugin
+        classpath "com.netflix.nebula:nebula-release-plugin:9.1.0"                // nebula.release plugin
         classpath "com.netflix.nebula:gradle-info-plugin:latest.release"                  //  nebula.info plugin
         classpath "com.netflix.nebula:gradle-java-cross-compile-plugin:latest.release"    //  nebula.java-cross-compile plugin  
 
