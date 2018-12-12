@@ -76,7 +76,7 @@ buildscript {
         classpath "com.netflix.nebula:gradle-resolution-rules-plugin:latest.release"      //  nebula.resolution-rules
 
 
-        classpath "com.netflix.nebula:nebula-project-plugin:latest.release"               //  nebula.project plugin
+        classpath "com.netflix.nebula:nebula-project-plugin:5.2.1"               //  nebula.project plugin
             //classpath "com.netflix.nebula:nebula-kotlin-plugin:latest.release"              //  nebula.kotlin plugin
             //classpath "com.gradle:build-scan-plugin:latest.release"                         //  com.gradle.build-scan plugin
             //classpath "com.gradle.publish:plugin-publish-plugin:latest.release"             //  com.gradle.plugin-publish plugin
